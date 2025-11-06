@@ -1,20 +1,39 @@
-#include<isotream>
+#include <iostream>
 using namespace std;
-class Book
-{
-private;
-int acc no,pages;
-char Book name[50],Author[50].ISBNo[50];
-float price;
+
+class Book {
+private:
+    int bookID;
+    char title[50];
+    float price;
+
 public:
-void getbook details();
-void display book();
+    // Function to input book details
+    void getDetails() {
+        cout << "Enter Book ID: ";
+        cin >> bookID;
+        cout << "Enter Book Title: ";
+        cin >> title;
+        cout << "Enter Book Price: ";
+        cin >> price;
+    }
+
+    // Function to display book details
+    void displayDetails() {
+        cout << "\n--- Book Details ---" << endl;
+        cout << "Book ID: " << bookID << endl;
+        cout << "Book Title: " << title << endl;
+        cout << "Book Price: " << price << endl;
+    }
 };
-void Book::get book details()
-{
-cout<<"Enter book Name:";
-cin>>BookName;
-cout<<Author";
-cin>>Author;
-cout<<"ISB No:";
-cin>>ISB No:";
+
+int main() {
+    // Create object of Book class
+    Book b1;
+
+    // Get and display book details
+    b1.getDetails();
+    b1.displayDetails();
+
+    return 0;
+}
